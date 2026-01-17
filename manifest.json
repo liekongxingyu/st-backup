@@ -1,5 +1,5 @@
 {
-  "name": "https://github.com/liekongxingyu/st-backup.git",
+  "name": "st-git-backup",
   "display_name": "聊天记录 Git 云端备份",
   "version": "1.0.0",
   "description": "自动将角色聊天记录同步到你指定的 Git 仓库",
