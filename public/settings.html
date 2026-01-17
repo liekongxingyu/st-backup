@@ -1,0 +1,82 @@
+<div id="st_git_backup_settings" class="inline-drawer">
+  <div class="inline-drawer-header">
+    <div class="inline-drawer-icon fa-solid fa-code-branch"></div>
+    <div class="inline-drawer-title">Git 云端备份设置</div>
+    <div class="inline-drawer-header-spacer"></div>
+    <div
+      class="inline-drawer-toggle inline-drawer-icon fa-solid fa-circle-chevron-down"
+    ></div>
+  </div>
+  <div class="inline-drawer-content">
+    <div class="st_git_backup_container">
+      <p class="description">
+        本插件会将
+        <code>data/default-user/chats</code> 下的所有聊天记录同步到你指定的私有
+        Git 仓库。
+      </p>
+
+      <div class="setting_item">
+        <label for="git_repo_url">仓库地址 (HTTPS):</label>
+        <input
+          type="text"
+          id="git_repo_url"
+          class="text_box"
+          placeholder="https://github.com/username/repo.git"
+        />
+      </div>
+
+      <div class="setting_item">
+        <label for="git_token">访问令牌 (Token/PAT):</label>
+        <input
+          type="password"
+          id="git_token"
+          class="text_box"
+          placeholder="ghp_xxxxxxxxxxxx"
+        />
+        <small>建议使用具有 repo 权限的个人访问令牌</small>
+      </div>
+
+      <div class="setting_row">
+        <div class="setting_item">
+          <label for="git_user_name">Git 用户名:</label>
+          <input
+            type="text"
+            id="git_user_name"
+            class="text_box"
+            placeholder="Your Name"
+          />
+        </div>
+        <div class="setting_item">
+          <label for="git_user_email">Git 邮箱:</label>
+          <input
+            type="text"
+            id="git_user_email"
+            class="text_box"
+            placeholder="email@example.com"
+          />
+        </div>
+      </div>
+
+      <div class="status_panel">
+        <div class="status_line">
+          状态: <span id="git_backup_status_text">未知</span>
+        </div>
+        <div class="status_line">
+          上次同步: <span id="git_backup_last_time">-</span>
+        </div>
+        <div
+          id="git_backup_error_msg"
+          class="error_text"
+          style="display: none"
+        ></div>
+      </div>
+
+      <div class="action_buttons">
+        <button id="git_backup_save_btn" class="menu_button">保存设置</button>
+        <button id="git_backup_sync_now_btn" class="menu_button primary">
+          立即同步
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

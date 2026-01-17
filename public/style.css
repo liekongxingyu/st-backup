@@ -1,0 +1,80 @@
+.st_git_backup_container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.st_git_backup_container .description {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.st_git_backup_container .setting_item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.st_git_backup_container label {
+  font-weight: bold;
+  font-size: 0.85em;
+  color: var(--grey);
+}
+
+.st_git_backup_container .setting_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.st_git_backup_container .status_panel {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-left: 4px solid var(--mainColor);
+}
+
+.st_git_backup_container .status_line {
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.st_git_backup_container .error_text {
+  color: #ff4d4d;
+  font-size: 0.8em;
+  margin-top: 8px;
+  word-break: break-all;
+}
+
+.st_git_backup_container .action_buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.st_git_backup_container .menu_button.primary {
+  background-color: var(--mainColor);
+  color: white;
+}
+
+.st_git_backup_container small {
+  font-size: 0.75em;
+  opacity: 0.6;
+}
+
+/* 状态颜色 */
+#git_backup_status_text.syncing {
+  color: #3498db;
+  font-weight: bold;
+}
+#git_backup_status_text.idle {
+  color: #2ecc71;
+}
+#git_backup_status_text.error {
+  color: #e74c3c;
+}
